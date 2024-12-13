@@ -12,7 +12,7 @@
 // SEO에서는 ISR SSG 같은 정적인 상태가 훨씬 도움이 많이 되는 것이다.
 
 import Link from "next/link";
-import { getChampion } from "../api/getChampion";
+import { getChampion } from "../api/api";
 import Image from "next/image";
 
 export default async function Champions() {
@@ -27,7 +27,7 @@ export default async function Champions() {
       <div className="grid grid-cols-4 gap-4">
         {championInfo.map((champion) => (
           <Link
-            href="/"
+            href={`/champions/${champion.id}`}
             key={champion.key}
             className="border rounded p-4 hover:shadow-lg "
           >
