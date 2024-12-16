@@ -2,7 +2,7 @@
 export async function getChampion(): Promise<Champions> {
   try {
     const response = await fetch(
-      "https://ddragon.leagueoflegends.com/cdn/9.19.1/data/ko_KR/champion.json",
+      "https://ddragon.leagueoflegends.com/cdn/14.24.1/data/ko_KR/champion.json",
       {
         next: {
           revalidate: 86400, // 하루 86400초
@@ -19,7 +19,7 @@ export async function getChampion(): Promise<Champions> {
 export async function getChampionDetail(id: string): Promise<Champion | null> {
   try {
     const response = await fetch(
-      `https://ddragon.leagueoflegends.com/cdn/9.19.1/data/ko_KR/champion/${id}.json`,
+      `https://ddragon.leagueoflegends.com/cdn/14.24.1/data/ko_KR/champion/${id}.json`,
       {
         next: {
           revalidate: 86400, // 하루 86400초
@@ -33,4 +33,24 @@ export async function getChampionDetail(id: string): Promise<Champion | null> {
     console.log("데이터를 가져오는데 문제가 발생하였습니다.");
     return null;
   }
+}
+
+export async function getItem(): Promise<Items> {
+  try {
+    const response = await fetch(
+      "https://ddragon.leagueoflegends.com/cdn/14.24.1/data/ko_KR/item.json"
+    );
+    return await response.json();
+  } catch (err) {
+    console.log("데이터를 가져오는데 문제가 발생하였습니다.");
+    return { data: {} };
+  }
+}
+
+export default async function fetchChampionRotation(): Promise<RotationChampion> {
+  const res = await fetch("/api/rotation");
+  if (!res.ok) {
+    throw new Error("데이터를 가져오지 못해 로드에 실패했습니다.");
+  }
+  return res.json();
 }

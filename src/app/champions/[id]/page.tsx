@@ -16,7 +16,7 @@ export async function generateMetadata({
   // const decodeId = decodeURIComponent(id);
 
   return {
-    title: `${id} - LOL Info`, //championData.seo.name 강의에서 왜 seo.name이였을까,
+    title: `${id} - LOL Info`,
     description: `${id} 상세 페이지입니다.`,
   };
 }
