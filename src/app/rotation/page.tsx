@@ -23,17 +23,18 @@ const Rotation = () => {
   });
 
   if (isPending) return <p>Loading...</p>;
-  if (!rotation || !champion) return;
-  console.log(rotation);
   if (error) return <p>Error: {error.message}</p>;
-  const rotationChampions = rotation?.freeChampionIdsForNewPlayers.map((id) => {
-    const champions = Object.values(champion?.data || {}).find(
-      (champion: Champion) => parseInt(champion.key) === id
-    );
-    console.log(champions);
-    return champions;
-  });
-  console.log(rotationChampions);
+
+  const rotationChampions =
+    rotation?.freeChampionIdsForNewPlayers.map((id) => {
+      const champions = Object.values(champion?.data || {}).find(
+        (champion: Champion) => parseInt(champion.key) === id
+      );
+      if (champions) {
+        return champions;
+      }
+      return null;
+    }) || [];
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">로테이션 챔피언</h1>

@@ -8,7 +8,6 @@ export default async function Items() {
   // object.keys 를 이용해 Object.entries로 map을 뿌러주어야 해결되는 문제다.
   // 따라서 type의 문제보단 서버 컴포넌트에서 뿌려줄 때 해결을 해주어야 함
   const itemInfo = Object.values(items.data);
-  console.log(itemInfo);
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">아이템 목록</h1>
