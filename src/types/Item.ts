@@ -9,6 +9,11 @@ interface Item {
     sprite: string; //"item0.png";
     group: string; //"item";
   };
+  gold: {
+    base: number;
+    total: number;
+    sell: number;
+  };
   tags: string[]; //["Boots"];
 }
 

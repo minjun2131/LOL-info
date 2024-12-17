@@ -1,4 +1,3 @@
-import { getChampion } from "@/app/api/api";
 import Image from "next/image";
 import React from "react";
 
