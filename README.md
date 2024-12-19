@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🛠️ LOL-INFO
 
-## Getting Started
+### ✅ 프로젝트 목표
+- Riot Developer Portal에서 제공해주는 API 를 활용한 LOL 챔피언 정보 사이트
 
-First, run the development server:
+### ✅ 기술 스택
+<div style="display:flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
+  <img src="https://img.shields.io/badge/TanStack_Query-00C7B7?style=for-the-badge&logo=react-query&logoColor=white">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white">
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ✅ 구현 기능
+- 챔피언,아이템 목록 페이지
+  - 챔피언 리스트 목록으로 보여주기
+  - ISR 렌더링 방식으로 구현
+- 챔피언,아이템 디테일 페이지
+  - 챔피언의 상세 정보 보여주기
+  - SSR 렌더링 방식으로 구현
+- 로테이션 페이지
+  - 무료로 플레이 가능한 챔피언 리스트 목록으로 보여주기
+  - CSR 렌더링 방식으로 구현
+- 다크모드
+  - 버튼을 누를 시 테마 변경이 가능한 다크모드 구현하기
+- Loading UI
+  - 데이터가 받아올 때 빈 화면이 아닌 동일하게 Loading UI를 띄워 보여주기
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### ✅ API
+- LOL의 챔피언 정보를 불러올 수 있는 API
+- LOL의 아이템 정보를 불러올 수 있는 API
+- LOL의 금주의 무료로 사용가능한 챔피언의 key를 불러올 수 있는 API
+ 
+### ✅ 트러블 슈팅
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- https://velog.io/@minjun23221/TIL-59-60-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-1
+- https://velog.io/@minjun23221/TIL-60-61-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-2
+- https://velog.io/@minjun23221/TIL-61-62-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-3
+- https://velog.io/@minjun23221/TIL-62-63-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-4
+- https://velog.io/@minjun23221/TIL-63-64-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-5
