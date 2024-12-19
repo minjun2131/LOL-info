@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
 
-const RIOT_API_URL = `https://kr.api.riotgames.com`;
-const RIOT_API_KEY = process.env.RIOT_API_KEY;
+
 
 export async function GET() {
+  const RIOT_API_URL = `https://kr.api.riotgames.com`;
+  const RIOT_API_KEY = process.env.RIOT_API_KEY;
+  
   if (!RIOT_API_KEY) {
     return NextResponse.json(
       { error: "API 키가 정의되지 않았습니다." },
