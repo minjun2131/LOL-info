@@ -1,7 +1,6 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import React, { useState } from "react";
 import fetchChampionRotation, { getChampion } from "../api/api";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,20 +8,29 @@ import Link from "next/link";
 const Rotation = () => {
   const {
     data: rotation,
-    isPending,
     error,
+    isPending: isPendingRotation,
   } = useQuery({
     queryKey: ["rotationChampions"],
     queryFn: fetchChampionRotation,
   });
 
-  const { data: champion } = useQuery({
+  const {
+    data: champion,
+    isPending: isPendingChampion,
+    error: championError,
+  } = useQuery({
     queryKey: ["Champions"],
     queryFn: getChampion,
     enabled: !!rotation,
   });
 
-  if (isPending) return <p>Loading...</p>;
+  if (isPendingRotation || isPendingChampion)
+    return (
+      <div className="fixed flex inset-0 items-center justify-center z-50">
+        <div className="w-16 h-16 border-4 border-gray-300 border-t-gray-900 border-solid rounded-full animate-spin"></div>
+      </div>
+    );
   if (error) return <p>Error: {error.message}</p>;
 
   const rotationChampions =
@@ -43,7 +51,7 @@ const Rotation = () => {
           <Link
             href={`/champions/${champion?.id}`}
             key={champion?.key}
-            className="border rounded p-4 hover:shadow-lg "
+            className="border rounded p-4 hover:shadow-lg dark:border-gray-500"
           >
             <Image
               src={`https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${champion?.id}.png`}

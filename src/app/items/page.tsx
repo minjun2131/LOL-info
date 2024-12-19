@@ -25,7 +25,7 @@ export default async function Items() {
             <Link
               href={`/items/${key}`}
               key={key}
-              className="border rounded p-4 hover:shadow-lg "
+              className="border rounded p-4 hover:shadow-lg dark:border-gray-500"
             >
               <Image
                 src={`https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/${image.full}`}
