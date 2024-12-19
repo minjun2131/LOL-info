@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const RIOT_API_URL = `https://kr.api.riotgames.com`;
-  const RIOT_API_KEY = process.env.RIOT_API_KEY;
+  const RIOT_API_KEY = `RGAPI-209db8c3-1dde-4e6d-ada3-6f8b5d22a24a`;
   
   if (!RIOT_API_KEY) {
     return NextResponse.json(
@@ -24,12 +24,12 @@ export async function GET() {
     );
 
     if (!res.ok) {
-      throw new Error("데이터를 가져오지 못해 로드에 실패했습니다.");
+      return NextResponse.json({ error:`응답 값이 존재하지 않습니다.` }, { status: 500 });
     }
 
     const data = await res.json();
     return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json({ error }, { status: 500 });
+    return NextResponse.json({ error:`에러가 발생하였습니다.` }, { status: 500 });
   }
 }
