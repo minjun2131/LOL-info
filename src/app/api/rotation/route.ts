@@ -18,7 +18,7 @@ export async function GET() {
       `${RIOT_API_URL}/lol/platform/v3/champion-rotations`,
       {
         headers: {
-          "X-Riot-Token": RIOT_API_KEY,
+          "X-Riot-Token": RIOT_API_KEY!,
         },
       }
     );
