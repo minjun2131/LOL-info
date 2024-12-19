@@ -96,7 +96,7 @@ export async function getItemDetail(key: string): Promise<Item | null> {
 }
 
 export default async function fetchChampionRotation(): Promise<RotationChampion> {
-  const res = await fetch("https://lol-info-jotg.vercel.app/api/rotation");
+  const res = await fetch("/api/rotation");
   if (!res.ok) {
     throw new Error("데이터를 가져오지 못해 로드에 실패했습니다.");
   }
