@@ -1,7 +1,8 @@
 ## 🛠️ LOL-INFO
 
-### ✅ 프로젝트 목표
+### ✅ 프로젝트 개요
 - Riot Developer Portal에서 제공해주는 API 를 활용한 LOL 챔피언 정보 사이트
+- 배포 링크 : lol-info-jotg.vercel.app/rotation
 
 ### ✅ 기술 스택
 <div style="display:flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
