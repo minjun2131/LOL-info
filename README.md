@@ -37,8 +37,8 @@
  
 ### ✅ 트러블 슈팅
 
-- https://velog.io/@minjun23221/TIL-59-60-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-1
-- https://velog.io/@minjun23221/TIL-60-61-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-2
-- https://velog.io/@minjun23221/TIL-61-62-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-3
-- https://velog.io/@minjun23221/TIL-62-63-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-4
-- https://velog.io/@minjun23221/TIL-63-64-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-5
+- [Type Error를 처음 마주하다](https://velog.io/@minjun23221/TIL-59-60-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-1)
+- [Next Config를 설정하지 않으면...](https://velog.io/@minjun23221/TIL-60-61-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-2)
+- [Data의 Type이 왜 맞지 않는걸까](https://velog.io/@minjun23221/TIL-61-62-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-3)
+- [CSR에서 useQuery를 사용해 2가지의 데이터 사용해보기](https://velog.io/@minjun23221/TIL-62-63-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-4)
+- [Object.entries를 이상하게 사용하면 생기는 문제](https://velog.io/@minjun23221/TIL-63-64-Next.js-lol-info-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-5)
