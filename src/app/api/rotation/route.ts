@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const RIOT_API_URL = `https://kr.api.riotgames.com`;
-  const RIOT_API_KEY = `RGAPI-209db8c3-1dde-4e6d-ada3-6f8b5d22a24a`;
+  const RIOT_API_KEY = `RGAPI-ce757c7e-569e-40b0-8eae-8cc167a48347`;
   
   if (!RIOT_API_KEY) {
     return NextResponse.json(
